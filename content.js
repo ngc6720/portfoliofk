@@ -25,7 +25,7 @@ const CONTENT = Object.freeze({
             },
             name: "Ksora",
             href: '/ksora',
-            url: "http://www.ksora.xyz",
+            url: "https://ksora.herokuapp.com/",
             audio: 0,
             idObject: {
                 name: "Ksora",
