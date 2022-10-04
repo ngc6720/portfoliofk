@@ -648,5 +648,6 @@ footer {
 @media screen and (max-width: 700px) and (min-height: 500px ) {
     footer { display: none; }
     section.project { top: 5rem; }
+    #progress { margin-top: 5rem; }
     #descriptionWrapper { display: none; }
 }
