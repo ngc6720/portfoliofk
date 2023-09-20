@@ -12,25 +12,19 @@
 }
 
 :root {
-    --0primary: #eaeaea;
-    --0background: #202020;
-    --0special: rgba(32, 32, 32, 0.92);
-    --0secondary: rgb(204, 255, 0);
-    --0surface: rgb(34, 34, 34);
+    --0primary: #d9d9d9;
+    --0background: rgb(9, 9, 9);
+    --0special: rgba(9, 9, 9, 0.92);
+    --0secondary: rgb(206, 255, 83);
     --0surface: rgb(40, 37, 37);
     
-    --0background: #150e0e;
-    --0background: #090909;
 
-    --1primary:#202020;
+    --1primary: #090909;
     --1background: white;
     --1special: rgba(255, 255, 255, 0.92);
     --1secondary: rgb(255, 64, 0);
-    --1surface: rgb(250, 250, 250);
     --1surface: rgb(248, 247, 244);
     
-    --1primary: #150e0e;
-    --1primary: #090909;
     
     --background: var(--1background);
     --primary: var(--1primary);
@@ -44,7 +38,7 @@
     --scrollbar3: var(--primary);
 
     --margin: 2rem;
-    --transitionParams: 350ms cubic-bezier(0.13, 0.03, 0, 0.99);
+    --transitionParams: 750ms cubic-bezier(0.13, 0.03, 0, 0.99);
     --projectLinksColumns: 3;
     --paddingButton: 0.2rem 0.4rem;
 
@@ -151,6 +145,8 @@ p, h2, h3 {
 }
 .logo svg {
     display: flex;
+    stroke-linejoin: round;
+    stroke-linecap: round;
 }
 
 
@@ -163,6 +159,7 @@ p, h2, h3 {
     right: calc(var(--margin-right) + 4vw + 4rem);
     width: 1.3rem;
     height: 1.3rem;
+    height: calc(0.75rem + 0.2 rem * 2);
     transition: border-color var(--transitionParams);
     background: none;
 }
@@ -170,28 +167,30 @@ p, h2, h3 {
     content: '';
     display: block;
     position: absolute;
-    top: calc(50% - 1px);
+    top: 50%;
     left: 0;
     width: 100%;
     background-color: var(--primary);
-    height: 2px;
+    height: 1px;
     background-color: var(--primary);
     transition: background var(--transitionParams);
-    opacity: 0.3;
 }
 #colorButton::after {
     content: '';
     display: block;
     position: absolute;
-    width: 6px;
-    top: 0;
+    width: 8px;
+    top: -1px;
     left: 2px;
-    background-color: var(--primary);
+    background-color: var(--background);
+    border: 1px solid var(--primary);
+    height: calc(100% - 2px);
+    height: 100%;
     height: 100%;
     transition: background var(--transitionParams), transform var(--transitionParams);
 }
 #colorButton.up::after {
-    transform: translateX(calc(1.3rem - 6px - 4px));
+    left: calc(1.3rem - 8px - 4px);
 }
 
 
@@ -207,7 +206,7 @@ p, h2, h3 {
 }
 #aboutLinkWrapper a, #aboutBackWrapper a {
     transition: color var(--transitionParams), border-color var(--transitionParams);
-    border-left: 2px solid var(--primary);
+    border-left: 1px solid var(--primary);
     padding: var(--paddingButton);
 }
 
@@ -279,12 +278,13 @@ section.about p {
     width: 100%;
     --fontSize: 0.5rem;
     --size: 8px;
-    font-size: calc(var(--fontSize) + var(--size));
-    letter-spacing: calc((var(--fontSize) - 1ch));
-    line-height: var(--fontSize);
+    font-size: calc(var(--fontSize) + var(--size)) !important;
+    letter-spacing: calc((var(--fontSize) - 1ch)) !important;
+    line-height: var(--fontSize) !important;
     overflow: hidden;
     text-align: center;
     pointer-events: all;
+    -webkit-text-size-adjust: none;
 }
 
 
@@ -363,7 +363,6 @@ a.backLink {
 }
 
 a.projectLink {
-    gap: 0.3rem;
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -392,19 +391,19 @@ a.projectLink::after {
 }
 
 .waveIcon {
-    width: 100%;
-    height: 100%;
     display: flex;
-    align-self: center;
+    margin-bottom: 1rem;
 }
 
 .waveIcon svg {
     fill: none;
     stroke: var(--primary);
     stroke-width: 1;
-    transition: stroke var(--transitionParams), border-color var(--transitionParams);
+    stroke-linejoin: round;
 }
-
+.waveIcon svg path {
+    shape-rendering: geometricPrecision;
+}
 
 /* project */
 
@@ -458,7 +457,7 @@ a.projectLink::after {
 }
 #carousel > #counter {
     font-weight: 400;
-    font-size: 1.6rem;
+    font-size: 1rem;
 }
 
 /* arrows */
@@ -658,27 +657,54 @@ img {
 /* media queries */
 
 @media (hover) {
-    a.projectLink:hover::after {
-        border: 1px solid var(--primary);
-        transform: translate(-0.5rem, 0.5rem);
+    a.projectLink::after  {
+        transition: border-color 0.2s;
+        opacity: 0;
     }
-    a.projectLink:hover  {
-        border: 1px solid var(--primary);
-        transform: translate(0.25rem, -0.25rem);
-}
-    a.projectLink div:nth-child(2) {
-        box-shadow: none;
-        transition: box-shadow var(--transitionParams);
-    }
-    a.projectLink:hover div:nth-child(2) {
-        box-shadow: inset 0em 0.5em var(--background), inset 0em -0.34em var(--primary);
+    a.projectLink:hover::after  {
+        opacity: 0.2;
+        border-color: var(--primary);
     }
 
-    #contact a:hover svg {
-       transition: transform 120ms ease;
+    a.projectLink:hover svg  {
+        transition: stroke 0.2s;
+    }
+     a.projectLink:hover div:nth-child(4)  {
+        transition: color 0.2s;
+    }
+
+    a.projectLink div:nth-child(2) {
+        box-shadow: none;
+    }
+    a.projectLink div:nth-child(2) {
+        transition: box-shadow 0s;
+    }
+
+    a.projectLink div:nth-child(2) {
+        position: relative;
+    }
+    a.projectLink div:nth-child(2)::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        opacity: 0;
+        top: 0.1rem;
+        box-shadow: inset 0em -0.34em var(--primary);
+    }
+    a.projectLink:hover div:nth-child(2)::before {
+        transition: opacity 0.3s, top 0.15s ease;
+        opacity: 0.8;
+        top: 0rem;
     }
     #contact a:hover svg {
-        transform: translateY(-2px)
+       transition: stroke 0.2s;
+       stroke: var(--secondary);
+    }
+    a.projectContentLinks:hover {
+        color: var(--secondary);
+        transition: color 0.2s;
     }
 }
 
