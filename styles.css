@@ -269,9 +269,13 @@ section.about p {
 }
 
 #aboutAsciiImgContainer {
-    width: clamp(0px, 100%, calc(90vh - var(--margin) * 2 - 6rem));
+    /* width: clamp(0px, 100%, calc(90vh - var(--margin) * 2 - 6rem)); */
+    width: clamp(0px, 100%, calc(80vh - var(--margin) * 2 - 6rem));
     transition: opacity 350ms, background-color var(--transitionParams);
     opacity: 0;
+    /* border-radius: 6px; */
+    /* background-color: rgb(243, 240, 236); */
+    /* background-color: rgb(39, 39, 38); */
 }
 
 #aboutAsciiImg {
@@ -714,7 +718,7 @@ img {
     }
 }
 
-@media screen and (max-width: 45rem) {
+@media screen and (max-width: 50rem) {
     :root { --margin: 1rem }
     footer { display: none; }
     #descriptionWrapper { display: none; }
