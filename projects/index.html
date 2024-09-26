@@ -1,23 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
       rel="shortcut icon"
       href="data:image/svg+xml, %3Csvg width='16' height='32' stroke='grey' viewBox='0 0 16 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 12L15 1L1.90735e-06 1M16 17L2.16164e-06 17M1 31L8 24L15 31' stroke-width='2'/%3E%3C/svg%3E"
-  >
-  <script type="module" crossorigin src="/assets/main-Cqg2tFTL.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/main-CHFz9En4.css">
-</head>
+    />
+    <script type="module" crossorigin src="/assets/main-Cqg2tFTL.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-CHFz9En4.css">
+  </head>
 
-<body>
-  <noscript>
-    <p>Sorry, this website needs javascript to load.</p>
-  </noscript>
-  <div id="three" class="hidden"></div>
-</body>
+  <body>
+    <noscript>
+      <p>Sorry, this website needs javascript to load.</p>
+    </noscript>
+    <main>
+      <section class="loading">
+        <div id="loadingTitle">
+          <div>François Kerforn</div>
+          <div>Works</div>
+        </div>
 
-<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+        <button id="loadingButton">
+          <span id="loadingProgress"></span>
+        </button>
+        <div id="loadingIcon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="32"
+            viewBox="0 0 16 32"
+          >
+            <path
+              d="M15 12L15 1L1.90735e-06 1M16 17L2.16164e-06 17M1 31L8 24L15 31"
+            ></path>
+          </svg>
+        </div>
+      </section>
+    </main>
+    <div id="three" class="hidden"></div>
+  </body>
 
 </html>
