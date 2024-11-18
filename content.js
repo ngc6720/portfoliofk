@@ -163,6 +163,11 @@ export default Object.freeze({
       href: "https://parapluie.pages.dev/",
       content: ["Parapluie", "Weather app", "Vuejs/Nuxt"],
     },
+    {
+      name: "Jardin d'automne",
+      href: "https://jardin-automne.vercel.app/",
+      content: ["3d scene", "3d scene of a garden", "three.js journey"],
+    },
   ],
   projects: [
     {

@@ -443,6 +443,10 @@ a.hyperLink::before {
   grid-column: 10/13;
   grid-row-start: 4;
 }
+#projectLinksList > a:nth-child(11) {
+  grid-column: 4/7;
+  grid-row-start: 5;
+}
 
 .waveIcon {
   display: flex;
@@ -1351,7 +1355,8 @@ section.loading button.active:after {
   #projectLinksList > a:nth-child(4),
   #projectLinksList > a:nth-child(4),
   #projectLinksList > a:nth-child(9),
-  #projectLinksList > a:nth-child(10) {
+  #projectLinksList > a:nth-child(10),
+  #projectLinksList > a:nth-child(11) {
     grid-column: span 6;
     grid-row: auto;
   }
