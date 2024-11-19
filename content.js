@@ -128,7 +128,7 @@ export default Object.freeze({
     ],
     contact: {
       mail: "fk.contactme@gmail.com",
-      twitter: "https://twitter.com/fr666666666",
+      twitter: "https://twitter.com/francoiskerforn",
       linkedin: "https://www.linkedin.com/in/fkerforn/",
     },
     tools: [
