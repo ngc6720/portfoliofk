@@ -1396,7 +1396,8 @@ section.loading button.active:after {
   #projectLinksList > a:nth-child(4),
   #projectLinksList > a:nth-child(4),
   #projectLinksList > a:nth-child(9),
-  #projectLinksList > a:nth-child(10) {
+  #projectLinksList > a:nth-child(10),
+  #projectLinksList > a:nth-child(11) {
     grid-column: 1/13;
     grid-row: auto;
   }

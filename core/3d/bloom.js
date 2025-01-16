@@ -24,8 +24,12 @@ const ConvolutionShader = {
     tDiffuse: { value: null },
     uImageIncrement: { value: new Vector2(0.001953125, 0.0) },
     cKernel: { value: [] },
-    qt1: { value: 2013 },
-    qt2: { value: 1571 },
+    // qt1: { value: 2013 },
+    // qt2: { value: 1571 },
+    // qt1: { value: 206 },
+    // qt2: { value: 1743 },
+    qt1: { value: 3709 },
+    qt2: { value: 575 },
   },
 
   vertexShader: /* glsl */ `
