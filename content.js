@@ -128,7 +128,8 @@ export default Object.freeze({
     ],
     contact: {
       mail: "fk.contactme@gmail.com",
-      twitter: "https://twitter.com/francoiskerforn",
+      bluesky: "https://bsky.app/profile/francoiskerforn.bsky.social",
+      github: "https://github.com/ngc6720/",
       linkedin: "https://www.linkedin.com/in/fkerforn/",
     },
     tools: [

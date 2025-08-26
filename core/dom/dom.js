@@ -84,12 +84,12 @@ const footer1Content = element("div", { className: "content" });
 export const footer2Link1 = element(
   "a",
   { href: "/fk", alt: "Projects | François Kerforn" },
-  "FK"
+  "FK",
 );
 export const footer2Link2 = element(
   "a",
   { href: "/projects", alt: "Home | François Kerforn" },
-  "Projects"
+  "Projects",
 );
 footer1Content.appendChild(element("p", CONTENT.footer.bio));
 
@@ -106,20 +106,31 @@ footer2Content.appendChild(
       target: "_blank",
       alt: "Send e-mail",
     },
-    "E-mail"
-  )
+    "Mail",
+  ),
 );
 
 footer2Content.appendChild(
   element(
     "a",
     {
-      href: CONTENT.footer.contact.twitter,
+      href: CONTENT.footer.contact.bluesky,
       target: "_blank",
-      alt: "Open Twitter Profile",
+      alt: "Open Bluesky Profile",
     },
-    "Twitter"
-  )
+    "Bluesky",
+  ),
+);
+footer2Content.appendChild(
+  element(
+    "a",
+    {
+      href: CONTENT.footer.contact.github,
+      target: "_blank",
+      alt: "Open Github Profile",
+    },
+    "Github",
+  ),
 );
 footer2Content.appendChild(
   element(
@@ -129,8 +140,8 @@ footer2Content.appendChild(
       target: "_blank",
       alt: "Open Linkedin Profile",
     },
-    "Linkedin"
-  )
+    "Linkedin",
+  ),
 );
 
 footer2Cat.appendChild(footer2Content);
@@ -140,7 +151,7 @@ const footer3Name = element("div", "Favourite tools:");
 const footer3Content = element("div", { className: "content" });
 
 CONTENT.footer.tools.forEach((tool) =>
-  footer3Content.appendChild(element("p", tool))
+  footer3Content.appendChild(element("p", tool)),
 );
 footer3Cat.appendChild(footer3Name);
 footer3Cat.appendChild(footer3Content);
@@ -160,17 +171,17 @@ const soundChoiceContainer = element("div", { id: "soundChoiceContainer" });
 const soundChoiceQuestion = element(
   "div",
   { id: "soundChoiceQuestion" },
-  "Enable audio ?"
+  "Enable audio ?",
 );
 export const enableSoundButton = element(
   "button",
   { id: "enableSoundButton", className: "active" },
-  "yes"
+  "yes",
 );
 export const disableSoundButton = element(
   "button",
   { id: "disableSoundButton" },
-  "no"
+  "no",
 );
 
 soundChoiceContainer.appendChild(soundChoiceQuestion);
@@ -186,7 +197,7 @@ main.appendChild(sectionFk);
 const hero = element("div", { id: "hero" });
 export const heroContent1 = makeVanisher(
   [element("span", "f"), element("span", "k")],
-  element("span")
+  element("span"),
 );
 export const heroContent2 = makeVanisher(
   [
@@ -194,7 +205,7 @@ export const heroContent2 = makeVanisher(
     element("span", "DESIGN"),
     element("span", "DEV_"),
   ],
-  element("span")
+  element("span"),
 );
 
 const heroContent = element("span");
@@ -204,7 +215,7 @@ hero.appendChild(heroContent);
 sectionFk.appendChild(hero);
 
 CONTENT.fk.homeDescription.forEach((text) =>
-  sectionFk.appendChild(article(div(p(text))))
+  sectionFk.appendChild(article(div(p(text)))),
 );
 
 // SECTION PROJECTS
@@ -227,8 +238,8 @@ export const projectLinks = CONTENT.projects.map((project) => {
         width: "100%",
         height: "100%",
         viewBox: `0 0  ${waveformsWidth} ${waveformsheight}`,
-      }
-    )
+      },
+    ),
   );
   const container = element("div", { className: "text" });
   const els = [
@@ -264,8 +275,8 @@ export const hyperLinks = CONTENT.links.map((project) => {
         width: "100%",
         height: "100%",
         viewBox: `0 0  ${waveformsWidth} ${waveformsheight}`,
-      }
-    )
+      },
+    ),
   );
   const container = element("div", { className: "text" });
   const els = [
@@ -298,7 +309,7 @@ const projectLinksEl = div({ id: "projectLinks" });
 export const projectLinksGrid = div(
   { id: "projectLinksList" },
   ...projectLinks,
-  ...hyperLinks
+  ...hyperLinks,
 );
 
 projectLinksEl.appendChild(projectLinksGrid);
@@ -365,16 +376,16 @@ export const backLinks = CONTENT.projects.map((_) =>
       className: "backLink",
       alt: "Projects | François Kerforn",
     }),
-    { tMin: 650, tMax: 900 }
-  )
+    { tMin: 650, tMax: 900 },
+  ),
 );
 
 export const projectNames = CONTENT.projects.map((project) =>
   makeVanisherDisplay(
     project.name.split(""),
     element("h2", { className: "projectName" }, project.name),
-    { tMin: 900, tMax: 1200, random: true }
-  )
+    { tMin: 900, tMax: 1200, random: true },
+  ),
 );
 
 CONTENT.projects.forEach((project, i) => {
@@ -386,11 +397,11 @@ CONTENT.projects.forEach((project, i) => {
   section.appendChild(backLinks[i].el);
   projectContent1[i].el.insertBefore(
     idContent[i],
-    projectContent1[i].el.childNodes[0]
+    projectContent1[i].el.childNodes[0],
   );
   projectContent1[i].el.insertBefore(
     projectNames[i].el,
-    projectContent1[i].el.childNodes[0]
+    projectContent1[i].el.childNodes[0],
   );
 
   const projectArticleGrid = element("div", {
