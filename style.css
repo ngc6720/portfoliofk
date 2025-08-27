@@ -806,6 +806,7 @@ section.loading button {
 }
 section.loading button.active:after {
     content: ">";
+    color: var(--secondary);
     position: absolute;
     bottom: -1rem;
     left: calc(50% - 0.5ch);
