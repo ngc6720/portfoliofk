@@ -95,7 +95,7 @@ footer1Content.appendChild(element("p", CONTENT.footer.bio));
 
 footer1Cat.appendChild(footer1Content);
 
-const footer2Cat = element("div", { className: "category" });
+const footer2Cat = element("div", { className: "category", id: "contact" });
 
 export const footer2Content = element("div", { className: "content" });
 footer2Content.appendChild(
@@ -370,7 +370,18 @@ export const projectContent2 = CONTENT.projects.map((project) => {
 
 export const backLinks = CONTENT.projects.map((_) =>
   makeVanisher(
-    [element("div", "[x] Close")],
+    [
+      element(
+        "div",
+        element(
+          "div",
+          element("span", { className: "btn-close-x" }, "["),
+          element("span", "x"),
+          element("span", { className: "btn-close-x" }, "]"),
+          element("span", "Close"),
+        ),
+      ),
+    ],
     element("a", {
       href: "/projects",
       className: "backLink",
