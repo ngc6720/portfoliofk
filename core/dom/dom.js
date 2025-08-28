@@ -243,7 +243,7 @@ export const projectLinks = CONTENT.projects.map((project) => {
   );
   const container = element("div", { className: "text" });
   const els = [
-    element("div", project.name),
+    element("div", { className: "projectLinkTitle" }, project.name),
     element("span", ""),
     element("div", project.idObject.date),
     element("div", project.idObject.type),
