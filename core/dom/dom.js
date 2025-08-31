@@ -200,11 +200,7 @@ export const heroContent1 = makeVanisher(
   element("span"),
 );
 export const heroContent2 = makeVanisher(
-  [
-    element("span", "SOUND"),
-    element("span", "DESIGN"),
-    element("span", "DEV_"),
-  ],
+  [element("span", "|"), element("span", "scroll"), element("span", "↓")],
   element("span"),
 );
 
