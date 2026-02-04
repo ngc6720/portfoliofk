@@ -60,7 +60,7 @@
 }
 
 *:focus {
-  outline: 2px solid var(--led) !important;
+  outline: 1px solid var(--led) !important;
 }
 
 #layout {
