@@ -34,7 +34,7 @@
   --margin: 2rem;
   --transitionParams: 750ms cubic-bezier(0.13, 0.03, 0, 0.99);
   --projectLinksColumns: 3;
-  --paddingButton: 0.4rem 0.4rem;
+  --paddingButton: 0.4rem 0.15rem;
 
   --scrollBarW: 0px;
   --navWidth: 3.5rem;
@@ -61,7 +61,7 @@
 
 button:focus,
 a:focus {
-  outline: 1px solid var(--led);
+  outline: 1px dotted var(--led);
 }
 
 #layout {
@@ -488,11 +488,9 @@ a.backLink {
   height: 1.5rem;
   align-items: center;
   transition: color var(--transitionParams);
-}
-
-.backLink > span > div {
   padding: var(--paddingButton);
 }
+
 .backLink > span > div > div > span:nth-last-child(1) {
   margin-left: 0.3rem;
 }
@@ -745,7 +743,9 @@ button#audioSwitch > div::after {
   -webkit-backdrop-filter: blur(8px) invert(20%);
   backdrop-filter: blur(8px) invert(20%) hue-rotate(360deg);
 
-  width: var(--multiplayerProgress);
+  width: calc(var(--multiplayerProgress) + 2px);
+  border-left: 1px dotted var(--led);
+  border-right: 1px dotted var(--led);
 }
 
 #progressContainer.hidden {
@@ -1322,10 +1322,7 @@ section.loading button.active:after {
   a.hyperLink:focus::before {
     border-color: rgb(72, 72, 72);
   }
-  a.projectLink:focus,
-  a.hyperLink:focus {
-    outline: none;
-  }
+
   a.projectLink svg {
     stroke: var(--secondary);
   }
