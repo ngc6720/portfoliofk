@@ -14,14 +14,14 @@ document.body.addEventListener("webkitAnimationEnd", hideTargetElement);
 
 const makeAnimDurations = (
   numberOfElements,
-  { tMin = 800, tMax = 2000, random = false } = {}
+  { tMin = 800, tMax = 2000, random = false } = {},
 ) => {
   const durations = [];
   for (let i = 0; i < numberOfElements; i++) {
     durations.push(
       random
         ? Math.random() * (tMax - tMin) + tMin
-        : (i * (tMax - tMin)) / numberOfElements + tMin
+        : (i * (tMax - tMin)) / numberOfElements + tMin,
     );
   }
   return durations;
@@ -56,15 +56,16 @@ const makeVanisher = (_elements, _wrapper, _animProps) => {
       (el, i) =>
         (el.style.animation = `${direction ?? "appearToTop"} ${
           durations[i]
-        }ms ${timingFunctioAppear}`)
+        }ms ${timingFunctioAppear}`),
     );
     timeoutPointerEvents = setTimeout(
       () => (wrapper.style.pointerEvents = "all"),
-      durations[durations.length - 1] * 0.6
+      durations[durations.length - 1] * 0.6,
     );
   };
   const vanish = (direction) => {
     clearTimeout(timeoutPointerEvents);
+    _wrapper.blur();
     elements.map((el, i) => {
       el.style.animation = `${direction ?? "vanishToTop"} ${
         durations[i] * 0.5
@@ -94,7 +95,7 @@ const makeVanisherDisplay = (_strArr, _wrapper, _animProps) => {
       3: "shortestLength",
       5: "shorterLength",
       6: "shortLength",
-    }).find(([k, v]) => elements.length < k) ?? [0, "normalLength"])[1]
+    }).find(([k, v]) => elements.length < k) ?? [0, "normalLength"])[1],
   );
 
   const addMaskAndConnectToWrapper = (el) => {
@@ -112,14 +113,14 @@ const makeVanisherDisplay = (_strArr, _wrapper, _animProps) => {
       (el, i) =>
         (el.style.animation = `${direction ?? "appearToTop"} ${
           durations()[i]
-        }ms ${timingFunctioAppear}`)
+        }ms ${timingFunctioAppear}`),
     );
   const vanish = (direction) =>
     elements.map(
       (el, i) =>
         (el.style.animation = `${direction ?? "vanishToTop"} ${
           durations()[i] * 0.5
-        }ms ${timingFunctionVanish}`)
+        }ms ${timingFunctionVanish}`),
     );
 
   elements.map((el) => addMaskAndConnectToWrapper(el));
