@@ -108,39 +108,23 @@ export default Object.freeze({
     meta: {
       title: "François Kerforn",
       description:
-        "François Kerforn's Portfolio - Independant sound and interface designer",
+        "François Kerforn's Portfolio - Software developer, Audio designer",
     },
     homeDescription: [
-      "Hi ! I am a developer that creates and composes sounds in various contexts.",
-      "Immersive experiences, HCI, artistic works, soundtracks, sound design tools.",
-      "I enjoy exploring and implementing fine-tuned designs, systems taylored for specific experiences.",
+      "Hi! I am a software developer focusing on web applications.",
+      "I mainly write websites and fullstack applications. I also like to implement designs and systems taylored for specific audiovisual experiences.",
+      "My journey as an independant developer led me to work on various products: applications, immersive experiences, HCI and artistic works.",
     ],
   },
   footer: {
     name: "François Kerforn",
-    bio: "François Kerforn / independant developer focusing on sound design and web applications.",
-    clients: [
-      "(((Echora))) - Nadine Schütz",
-      "Aurasens",
-      "GHU Paris psychiatrie & neurosciences",
-      "IRCAM",
-      "Native Instruments",
-    ],
+    bio: "François Kerforn / I am a software developer with a focus on web applications and front-end. I worked as an independant with diverse clients, artists, researchers and manufacturers. I also do creative coding and audio design. I am open to new work, as freelance or full time. Let's connect!",
     contact: {
       mail: "fk.contactme@gmail.com",
       bluesky: "https://bsky.app/profile/francoiskerforn.bsky.social",
       github: "https://github.com/ngc6720/",
       linkedin: "https://www.linkedin.com/in/fkerforn/",
     },
-    tools: [
-      "Ableton Live",
-      "Maxmsp/M4L",
-      "HTML/CSS",
-      "Javascript",
-      "WebAudio",
-      "ThreeJS",
-      "JUCE",
-    ],
   },
   projectsList: {
     meta: {

@@ -146,16 +146,6 @@ footer2Content.appendChild(
 
 footer2Cat.appendChild(footer2Content);
 
-const footer3Cat = element("div", { className: "category" });
-const footer3Name = element("div", "Favourite tools:");
-const footer3Content = element("div", { className: "content" });
-
-CONTENT.footer.tools.forEach((tool) =>
-  footer3Content.appendChild(element("p", tool)),
-);
-footer3Cat.appendChild(footer3Name);
-footer3Cat.appendChild(footer3Content);
-
 footer.appendChild(footer1Cat);
 footer.appendChild(footer2Cat);
 footer.appendChild(element("p", `${new Date().getFullYear()} © fk.`));
