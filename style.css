@@ -1287,7 +1287,7 @@ section.loading button.active:after {
     font-size: 0.8rem;
     pointer-events: none;
     transition: opacity 0ms ease;
-    width: 4.5rem;
+    width: 4rem;
     height: 1.5rem;
     display: flex;
     align-items: center;
