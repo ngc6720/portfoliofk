@@ -391,7 +391,6 @@ CONTENT.projects.forEach((project, i) => {
     className: "project",
   });
   main.appendChild(section);
-  section.appendChild(backLinks[i].el);
   projectContent1[i].el.insertBefore(
     idContent[i],
     projectContent1[i].el.childNodes[0],
@@ -405,9 +404,11 @@ CONTENT.projects.forEach((project, i) => {
     className: "projectArticleGrid",
   });
 
-  projectArticleGrid.appendChild(projectContent1[i].el);
-  projectContent2[i]?.el &&
-    projectArticleGrid.appendChild(projectContent2[i].el);
+  const gridContent = div();
+  projectArticleGrid.appendChild(gridContent);
+  gridContent.appendChild(backLinks[i].el);
+  gridContent.appendChild(projectContent1[i].el);
+  projectContent2[i]?.el && gridContent.appendChild(projectContent2[i].el);
   const link = element("a", {
     href: project.url,
     className: "projectContentLinks",
@@ -417,7 +418,7 @@ CONTENT.projects.forEach((project, i) => {
   link.setAttribute("data-text", linkSpan.textContent);
   link.appendChild(linkSpan);
 
-  if (project.url) projectArticleGrid.lastChild.appendChild(link);
+  if (project.url) gridContent.lastChild.appendChild(link);
 
   section.appendChild(projectArticleGrid);
 });

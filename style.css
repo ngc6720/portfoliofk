@@ -487,7 +487,6 @@ a.backLink {
   width: fit-content;
   height: 1.5rem;
   align-items: center;
-
   transition: color var(--transitionParams);
 }
 
@@ -529,7 +528,7 @@ a.backLink {
   column-gap: var(--layout-column-gap);
 }
 
-.projectArticleGrid > article {
+.projectArticleGrid > div {
   grid-column: 5/9;
   column-gap: 2rem;
 
@@ -1354,7 +1353,7 @@ section.loading button.active:after {
     --fontsize-xl: 3rem;
   }
 
-  .projectArticleGrid > article,
+  .projectArticleGrid > div,
   #progress {
     grid-column: 4/10;
   }
@@ -1383,7 +1382,7 @@ section.loading button.active:after {
     --fontsize-xl: 2rem;
   }
 
-  .projectArticleGrid > article,
+  .projectArticleGrid > div,
   #progress {
     grid-column: 3/11;
   }
@@ -1424,7 +1423,7 @@ section.loading button.active:after {
     --projectNameSizeFactor: 4;
   }
 
-  .projectArticleGrid > article,
+  .projectArticleGrid > div,
   #progress {
     grid-column: 1/13;
   }
