@@ -490,17 +490,21 @@ a.backLink {
   margin-bottom: 2rem;
   text-align: center;
   width: fit-content;
-  height: 1.5rem;
+  height: 1.2rem;
   align-items: center;
   transition: color var(--transitionParams);
-  padding: var(--paddingButton);
+  width: fit-content;
+  padding: 0;
+}
+a.backLink > span > div > div {
+  padding: 2px 4px;
+  border: 1px solid var(--led);
+  font-size: 0.7rem;
+  color: var(--led);
 }
 
 .backLink > span > div > div > span:nth-last-child(1) {
   margin-left: 0.3rem;
-}
-.btn-close-x {
-  color: var(--secondary);
 }
 
 .projectName {
@@ -729,7 +733,7 @@ button#audioSwitch > div::after {
   column-gap: var(--layout-column-gap);
   padding-left: var(--margin-left);
   padding-right: var(--margin-right);
-  padding-top: calc(var(--margin) + 3.6rem + var(--navHeight));
+  padding-top: calc(var(--margin) + 3.2rem + var(--navHeight));
 }
 
 #progress {
