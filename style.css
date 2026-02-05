@@ -1427,7 +1427,7 @@ section.loading button.active:after {
   }
   #carousel > *:nth-child(3) {
     justify-self: end;
-    grid-column: 8/13;
+    grid-column: 8/14;
   }
 
   section#fk article > div {
