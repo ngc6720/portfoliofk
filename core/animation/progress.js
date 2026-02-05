@@ -15,6 +15,6 @@ export default (app, progressEl, getPosition) => () => {
   requestAnimationFrame(app.animateProgress);
   progressEl.style.setProperty(
     "--multiplayerProgress",
-    `${progressLowpass(getPosition() * 1.005) * 100}%`,
+    `${progressLowpass(getPosition())}`,
   );
 };

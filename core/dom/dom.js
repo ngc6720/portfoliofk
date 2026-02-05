@@ -62,15 +62,21 @@ export const audioSwitch = element("button", {
   id: "audioSwitch",
   className: "hidden",
 });
-const audioSwitchSpan = element("span", "Audio (is on)");
-audioSwitchSpan.innerHTML = "Audio [<span>on</span>]";
+const audioSwitchSpan = element(
+  "span",
+  { name: "Audio switch" },
+  "Audio switch",
+);
+audioSwitchSpan.innerHTML = "<span>I/O</span>";
 const audioSwitchIcon = element("div");
 audioSwitch.setAttribute("data-text", audioSwitchSpan.textContent);
-audioSwitch.appendChild(audioSwitchIcon);
 audioSwitch.appendChild(audioSwitchSpan);
+audioSwitch.appendChild(audioSwitchIcon);
 
-nav.appendChild(navLinkHome);
-nav.appendChild(navLinkProjects);
+const navLinks = div();
+navLinks.appendChild(navLinkHome);
+navLinks.appendChild(navLinkProjects);
+nav.appendChild(navLinks);
 nav.appendChild(audioSwitch);
 header.appendChild(nav);
 

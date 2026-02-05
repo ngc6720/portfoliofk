@@ -118,7 +118,7 @@ export default Object.freeze({
   },
   footer: {
     name: "François Kerforn",
-    bio: "François Kerforn / I am a software developer with a focus on web applications and front-end. I worked as an independant with diverse clients, artists, researchers and manufacturers. I also do creative coding and audio design. I am open to new work, as freelance or full time. Let's connect!",
+    bio: "François Kerforn / I am a software developer with a focus on web applications and front-end. I worked as an independant with diverse clients, artists, researchers and manufacturers. I also do creative coding and audio design. I am open for work, as freelance or full time. Let's talk!",
     contact: {
       mail: "fk.contactme@gmail.com",
       bluesky: "https://bsky.app/profile/francoiskerforn.bsky.social",
