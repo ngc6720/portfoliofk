@@ -498,6 +498,7 @@ a.backLink {
 }
 a.backLink > span > div > div {
   padding: 2px 4px;
+  margin-right: 1px;
   border: 1px solid var(--led);
   font-size: 0.7rem;
   color: var(--led);
