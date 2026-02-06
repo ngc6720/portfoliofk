@@ -112,19 +112,7 @@ footer2Content.appendChild(
       target: "_blank",
       alt: "Send e-mail",
     },
-    "Mail",
-  ),
-);
-
-footer2Content.appendChild(
-  element(
-    "a",
-    {
-      href: CONTENT.footer.contact.bluesky,
-      target: "_blank",
-      alt: "Open Bluesky Profile",
-    },
-    "Bluesky",
+    "E-Mail",
   ),
 );
 footer2Content.appendChild(
@@ -138,6 +126,18 @@ footer2Content.appendChild(
     "Github",
   ),
 );
+footer2Content.appendChild(
+  element(
+    "a",
+    {
+      href: CONTENT.footer.contact.bluesky,
+      target: "_blank",
+      alt: "Open Bluesky Profile",
+    },
+    "Bluesky",
+  ),
+);
+
 footer2Content.appendChild(
   element(
     "a",
