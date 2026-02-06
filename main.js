@@ -162,7 +162,7 @@ const App = function _App() {
   _App.progressNeedsUpdate = false;
 
   _App.animateProgress = makeProgressAnim(_App, dom.progress, () =>
-    multiplayer.getPosition()
+    multiplayer.getPosition(),
   );
 
   _App.renderNewScroll = function (_state) {
@@ -197,7 +197,7 @@ const App = function _App() {
     try {
       if (!_App.updates.get(k))
         console.warn(
-          `No update function corresponding to App.updates.get(${k})(${v})`
+          `No update function corresponding to App.updates.get(${k})(${v})`,
         );
       else _App.updates.get(k)(v);
     } catch (e) {
@@ -215,7 +215,7 @@ const App = function _App() {
         (k) =>
           k !== "data" &&
           state[k] !== undefined &&
-          previousState[k] !== state[k]
+          previousState[k] !== state[k],
       );
 
       // sets fixed positions in window for transitions not to be affected by body scroll change
@@ -418,7 +418,7 @@ const App = function _App() {
 
         Promise.all([createAndLoadAudio(), loadTextures(manager)]) //, fakePromise(3000) ])
           .catch((e) =>
-            console.error("Error while loading audio/textures > ", e)
+            console.error("Error while loading audio/textures > ", e),
           )
           .finally(() => {
             _App.loaded = true;
@@ -432,16 +432,16 @@ const App = function _App() {
             });
 
             Array.from([dom.navLinkProjects, dom.navLinkHome]).forEach(
-              (el) => (el.onmouseenter = () => oneh.play(0))
+              (el) => (el.onmouseenter = () => oneh.play(0)),
             );
             Array.from([
               ...document.getElementsByClassName("projectContentLinks"),
             ]).forEach((el) => (el.onmouseenter = () => oneh.play(3)));
             dom.projectLinks.forEach(
-              (el) => (el.onmouseenter = () => oneh.play(1))
+              (el) => (el.onmouseenter = () => oneh.play(1)),
             );
             dom.hyperLinks.forEach(
-              (el) => (el.onmouseenter = () => oneh.play(1))
+              (el) => (el.onmouseenter = () => oneh.play(1)),
             );
             dom.footer2Content
               .querySelectorAll("a")
@@ -480,7 +480,7 @@ const App = function _App() {
               document.querySelector("section#fk"),
               document.querySelector("footer"),
             ],
-            false
+            false,
           );
           document.querySelector("section#fk").style.opacity = 1;
         } else {
@@ -489,7 +489,7 @@ const App = function _App() {
               document.querySelector("section#fk"),
               document.querySelector("footer"),
             ],
-            true
+            true,
           );
           document.querySelector("section#fk").style.opacity = 0;
         }
@@ -516,12 +516,12 @@ const App = function _App() {
       (bool) => {
         if (bool) {
           disableElements(dom.nav, false);
-          dom.nav.classList.remove("hidden"),
+          (dom.nav.classList.remove("hidden"),
             dom.audioSwitch.classList.contains("hidden") &&
               setTimeout(
                 () => dom.audioSwitch.classList.remove("hidden"),
-                1500
-              );
+                1500,
+              ));
         } else {
           disableElements(dom.nav, true);
           dom.nav.classList.add("hidden");
@@ -536,12 +536,13 @@ const App = function _App() {
               (arrow) => (
                 (arrow.style.opacity = "0"),
                 (arrow.style.pointerEvents = "none")
-              )
+              ),
             )
           : dom.arrows.forEach(
               (arrow) => (
-                (arrow.style.opacity = "1"), (arrow.style.pointerEvents = "all")
-              )
+                (arrow.style.opacity = "1"),
+                (arrow.style.pointerEvents = "all")
+              ),
             );
       },
     ],
@@ -560,7 +561,7 @@ const App = function _App() {
             } else {
               disableElements(
                 document.querySelectorAll("section.project")[id],
-                false
+                false,
               );
               dom.projectNames[id].appear("appearToTop");
               dom.projectContent1[id].display(true);
@@ -573,7 +574,7 @@ const App = function _App() {
             if (id === undefined || id === -1) {
               disableElements(
                 document.querySelectorAll("section.project")[previousId],
-                true
+                true,
               );
               dom.projectNames[previousId].vanish("vanishToTop");
               dom.projectContent1[previousId].display(false);
@@ -591,20 +592,20 @@ const App = function _App() {
               }
               disableElements(
                 document.querySelectorAll("section.project")[id],
-                false
+                false,
               );
               disableElements(
                 document.querySelectorAll("section.project")[previousId],
-                true
+                true,
               );
               dom.projectContent1[previousId].display(false);
               dom.projectContent2[previousId]?.display(false);
               dom.backLinks[previousId].vanish();
               dom.projectNames[previousId].vanish(
-                direction === "LEFT" ? "vanishToRight" : "vanishToLeft"
+                direction === "LEFT" ? "vanishToRight" : "vanishToLeft",
               );
               dom.projectNames[id].appear(
-                direction === "LEFT" ? "appearToLeft" : "appearToRight"
+                direction === "LEFT" ? "appearToLeft" : "appearToRight",
               );
               dom.projectContent1[id].display(true);
               dom.projectContent2[id]?.display(true);
@@ -627,6 +628,8 @@ const App = function _App() {
       "multiplayer",
       (id) => {
         multiplayer?.play(id);
+        if (id === -1) dom.progressContainer.classList.add("noAudio");
+        else dom.progressContainer.classList.remove("noAudio");
       },
     ],
     [
@@ -708,7 +711,7 @@ const App = function _App() {
         const path = el.href.substring(window.location.origin.length);
         _App.route(path);
         return false;
-      })
+      }),
   );
 
   // Elements changing with pages transi are explicitly disabled except loading section (default page)
@@ -718,7 +721,7 @@ const App = function _App() {
       document.querySelector("footer"),
       document.querySelector("nav"),
     ].filter((el) => !el.classList.contains("loading")),
-    true
+    true,
   );
 
   const onEnableSound = () => {
@@ -765,7 +768,7 @@ const App = function _App() {
         }
         setTimeout(() => (stopstopstopstop = false), 300);
       };
-    })()
+    })(),
   );
 
   // carousel buttons
@@ -791,7 +794,7 @@ const App = function _App() {
           }
           setTimeout(() => (stopstopstopstop = false), 300);
         });
-    })()
+    })(),
   );
 
   async function toggleAudio(event) {

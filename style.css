@@ -736,7 +736,9 @@ button#audioSwitch > div::after {
   padding-right: var(--margin-right);
   padding-top: calc(var(--margin) + 3.2rem + var(--navHeight));
 }
-
+#progressContainer.noAudio #progress {
+  border-right: none;
+}
 #progress {
   --multiplayerProgress: 0;
   transition: opacity 250ms ease-in;
@@ -749,11 +751,7 @@ button#audioSwitch > div::after {
 
   width: calc(var(--multiplayerProgress) * 1.005 * 100% + 2px);
   border-left: 1px dotted var(--led);
-  border-right: calc(
-      1px *
-        min(var(--multiplayerProgress) * var(--multiplayerProgress) * 1000, 1)
-    )
-    dotted var(--led);
+  border-right: 1px dotted var(--led);
 }
 
 #progressContainer.hidden {
