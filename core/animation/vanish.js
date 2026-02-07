@@ -80,6 +80,19 @@ const makeVanisher = (_elements, _wrapper, _animProps) => {
 };
 
 const makeVanisherDisplay = (_strArr, _wrapper, _animProps) => {
+  const min = 7;
+  _strArr = _strArr.slice(0, min - 1);
+  if (_strArr.length < min) {
+    const len = _strArr.length;
+    const toAdd = min - len;
+    let id = 0;
+    for (let i = toAdd; i >= 0; i--) {
+      if (id > len - 1) id = 0;
+      _strArr.push(_strArr[id]);
+      id++;
+    }
+  }
+  console.log(_strArr);
   const elements = _strArr.map((str) => {
     const e = document.createElement("span");
     e.textContent = str;
