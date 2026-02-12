@@ -151,7 +151,21 @@ export default Object.freeze({
     {
       name: "Jardin d'automne",
       href: "https://jardin-automne.vercel.app/",
-      content: ["3d scene", "3d scene of a garden", "three.js journey"],
+      content: ["3d scene", "3d scene of a garden", "three.js"],
+    },
+    {
+      name: "Cat Bot",
+      href: "https://github.com/ngc6720/chat-app",
+      content: ["Chat app", "Chat app", "React/Next.js"],
+    },
+    {
+      name: "RAG in audio",
+      href: "https://github.com/ngc6720/rag-audio",
+      content: [
+        "RAG in audio",
+        "Interact with speech content",
+        "Python/FastAPI",
+      ],
     },
   ],
   projects: [
@@ -166,13 +180,13 @@ export default Object.freeze({
       idObject: {
         name: "Iris",
         date: "2022",
-        type: "Music / Installation",
+        type: "Sound Installation",
         role: "Composer",
       },
       p: [
         "<span>Iris</span> is a music composition that offers fragmented soundscapes for the listener to wander in. It is imagined as a sound installation where layers of sounds spread in the space.",
-        "The composition is meant to take several forms, adapting to the diffusion context. It was first commissioned by 'A More Beautiful Journey' and the 'MU' collective as two sound installations.",
-        "The first is using Soundways – an application for spatialized sound diffusion regarding users geopositioning – and is located in Trinity Bellwoods Park, Toronto. The latter is using Sound Delta – a device for spatialized immersive composition on headphones with radiowave tracking – and was created in La Station Gare des Mines, Paris.",
+        "The composition is meant to take several forms, adapting to the diffusion context. It was commissioned by 'A More Beautiful Journey' and the 'MU' collective as two sound installations.",
+        "The first is using Soundways – an application for spatialized sound diffusion regarding users geopositioning – and was located in Trinity Bellwoods Park, Toronto. The latter is using Sound Delta – a device for spatialized immersive composition on headphones with radiowave tracking – and was created in La Station Gare des Mines, Paris.",
       ],
     },
     {
