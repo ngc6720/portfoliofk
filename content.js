@@ -112,13 +112,13 @@ export default Object.freeze({
     },
     homeDescription: [
       "Hi! I am a software developer focusing on web applications.",
-      "I mainly write websites and fullstack applications. I also like to implement designs and systems taylored for specific audiovisual experiences.",
+      "I also like to implement designs and systems taylored for specific audiovisual experiences.",
       "My journey as a developer led me to work on various products: applications, immersive experiences, HCI and artistic works.",
     ],
   },
   footer: {
     name: "François Kerforn",
-    bio: "François Kerforn / I am a software developer with a focus on web applications and front-end. I worked as an independant with artists, researchers and manufacturers. I also do creative coding and audio design. I am open for work, as freelance or full time. Let's talk!",
+    bio: "François Kerforn / I am a software developer with a focus on web applications. I worked with artists, researchers and manufacturers. I also do creative coding and audio design. Let's talk!",
     contact: {
       mail: "fk.contactme@gmail.com",
       bluesky: "https://bsky.app/profile/francoiskerforn.bsky.social",
